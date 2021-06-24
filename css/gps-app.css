@@ -1,0 +1,34 @@
+div#app-container {
+    height: 100vh!important;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+#zip-module {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1.1rem;
+    text-align: center;
+    height: 100px;
+}
+
+#delivery-masthead {
+    height: 100px;
+    width: 100%;
+    background: #009bff;
+    position: fixed;
+    top: 0;
+   
+}
+
+#delivery-footer {
+    height: 100px;
+    background: #404040;
+    width: 100%;
+
+}
