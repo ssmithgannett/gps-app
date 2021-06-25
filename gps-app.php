@@ -20,6 +20,7 @@ function gps_app() {
     
     <div id="app-container">
       <header id="delivery-masthead"></header>
+      <h1 id="apply-now">Apply to be a carrier</h1>
       <div id="zip-module">
         <p>Enter your zip code to begin your application.</p>
         <div>
@@ -30,7 +31,7 @@ function gps_app() {
       
     </div>
 
-   
+    <div id="apply-cta"><a href="#apply-now">Apply Now</a></div>
 
     <script type="text/javascript" src="' . plugin_dir_url( __FILE__ ) . 'js/gps-app.js"></script>
   ';
