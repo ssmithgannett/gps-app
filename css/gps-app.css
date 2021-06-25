@@ -19,9 +19,15 @@ div#app-container {
 #delivery-masthead {
     height: 100px;
     width: 100%;
-    background: #009bff;
+    background: #fff;
     position: fixed;
     top: 0;
+    border-bottom: 3px solid #009bff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 0 18.5%;
 }
 
 #delivery-footer {
@@ -52,4 +58,30 @@ div#app-container {
     padding: 10px 25px;
     border-radius: 25px;
     text-decoration: none;
+}
+
+#site-brand {
+    text-transform: uppercase;
+    color: #009bff;
+    font-size: 2em;
+    font-family: 'Unify sans', sans-serif;
+}
+
+#delivery-masthead ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#delivery-masthead ul li {
+    margin-left: 20px;
+}
+
+#delivery-masthead ul li a {
+    text-decoration: none;
+    color: #404040;
 }

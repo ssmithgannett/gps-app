@@ -19,7 +19,14 @@ function gps_app() {
   return '
     
     <div id="app-container">
-      <header id="delivery-masthead"></header>
+      <header id="delivery-masthead">
+        <div id="site-brand">Gannett Carriers</div>
+        <ul>
+          <li><a href="#">What we offer</a></li>
+          <li><a href="#">How it works</a></li>
+          <li><a href="#">FAQs</a></li>
+        </ul>
+      </header>
       <h1 id="apply-now">Apply to be a carrier</h1>
       <div id="zip-module">
         <p>Enter your zip code to begin your application.</p>
