@@ -57,10 +57,10 @@ function form_module() {
     <h2>Apply Now</h2>
     <div id="zip-module">
       <p>Enter your zip code to begin your application.</p>
-      <div>
-        <input type="text" name="zip" id="enter-zip">
-        <button id="start-app">Continue</button>
-      </div>
+      <form id="zipform" onSubmit="return false">
+        <input type="text" name="zip" id="enter-zip" placeholder="Zip code">
+        <input type="submit" id="start-app" value="Continue">
+      </form>
     </div>
     
 

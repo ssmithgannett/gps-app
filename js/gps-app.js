@@ -15,22 +15,24 @@ jQuery(document).ready(function() {
   `)
 
 
-jQuery('#start-app').on('click', function(e) {
+jQuery('#zipform').submit(function(e) {
+  //preventDefault();
   const zip = jQuery('#enter-zip').val();
+  console.log(zip)
 
   jQuery.ajax({
-url : 'https://newmredesign.wpengine.com/wp-content/plugins/admin/carriers/zrp.php',
+url : 'https://newmredesign.wpengine.com/wp-content/plugins/admin/carriers/gps_app_zip.php',
 data: {
 'zip': zip
 },
 success : function(data) {
       for (let i = 0; i < data.length; i++) {
-          var region = data[i].region
-          var property = data[i].property
+          var market = data[i].market
+          var property = data[i].publication_name
       }
   
-      const url = `https://gannett-nxuao.formstack.com/forms/prepop_test?zipcode=${zip}&region=${region}&property=${property}`;
-      jQuery('#form-here').append(`<iframe width="100%" height="2050" style="border:none;" src="${url}"></iframe>`);
+      const url = `https://gannett-nxuao.formstack.com/forms/prepop_test?zipcode=${zip}&region=${market}&property=${property}`;
+      jQuery('#form-here').append(`<iframe scrolling="yes" width="100%" height="500" style="border:none;" src="${url}"></iframe>`);
       jQuery('#zip-module').fadeOut();
 
 },
