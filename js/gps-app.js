@@ -8,7 +8,9 @@ jQuery(document).ready(function() {
   const subheadText = jQuery('.entry-content h3:nth-child(2)').text();
   jQuery('.entry-content h3:nth-child(2)').remove()
   jQuery('.entry-content h1:first-child').remove()
-
+  jQuery('p').has('img').addClass('has-inline')
+ 
+  jQuery('h3').addClass('bullet-title')
   jQuery('.hero-text').append(`
   <h1>${headlineText}</h1>
   <p>${subheadText}<p>
@@ -18,10 +20,15 @@ jQuery(document).ready(function() {
 jQuery('#zipform').submit(function(e) {
   //preventDefault();
   const zip = jQuery('#enter-zip').val();
+  if (zip.length != 5 || isNaN(zip)) {
+    alert('Please enter a valid five-digit zip code')
+  } else {
+
+ 
   console.log(zip)
 
   jQuery.ajax({
-url : 'https://newmredesign.wpengine.com/wp-content/plugins/admin/carriers/gps_app_zip.php',
+url : 'https://newmredesign.wpengine.com/wp-content/plugins/admin/carriers/gps_app_zips.php',
 data: {
 'zip': zip
 },
@@ -41,6 +48,7 @@ console.log("Request: "+JSON.stringify(request));
 }
               
 });// end ajax       
+}
 });// start app
 
 jQuery('#burger').on('click', function() {
@@ -50,6 +58,10 @@ jQuery('#burger').on('click', function() {
 jQuery('#gps-menu .close').on('click', function() {
   jQuery('#gps-menu').removeClass('show')
 });
+
+jQuery('#gps-menu a').click(function() {
+  jQuery('#gps-menu').removeClass('show')
+})
 
 
 });//page load

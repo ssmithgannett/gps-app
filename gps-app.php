@@ -31,7 +31,6 @@ function gps_app_header() {
     <li><a href="#how-it-works">How it works</a></li>
       <li><a href="#what-we-offer">What we offer</a></li>
       <li><a href="#faq">FAQs</a></li>
-      <li><a href="' . get_home_url() . '/delivery-routes">Available Routes</a></li>
     </ul>
   </header>
 
@@ -39,7 +38,7 @@ function gps_app_header() {
     <div class="hero-text"></div>
   </div>
 
-  <div id="apply-cta"><a href="#zip-module">Apply Now</a></div>
+  <div id="apply-cta"><a href="#form-module">Apply Now</a></div>
   <script type="text/javascript" src="' . plugin_dir_url( __FILE__ ) . 'js/gps-app.js"></script>
   ';
 }
@@ -69,9 +68,9 @@ function form_module() {
 
   <footer id="gps-footer">
   <div class="footer-text">
-  <img class="site-brand" src="' . $logo .'" /><p>&copy; Gannett Co., Inc.'. date("Y") .' . All Rights Reserved.</p>
-  <p><a href="' . get_home_url() . '/terms-of-use">Terms of use</a> | <a href="' . get_home_url() . '/cookie-policy">Cookie policy</a> | <a href="'. get_privacy_policy_url() . '">Privacy policy</a> | <a href="' . get_home_url() . '/ccpa">Your California privacy rights/privacy policy</a></p>
-  <!-- <p><a href="' . get_home_url().'/cookie-policy">Do Not Sell My Personal Information/Cookie Settings</a></p>-->
+  <img class="site-brand" src="' . $logo .'" /><p>&copy; Gannett Co., Inc. '. date("Y") .'. All Rights Reserved.</p>
+  <p><a target="_blank" href="' . get_home_url() . '/terms-of-use">Terms of use</a> | <a target="_blank" href="' . get_home_url() . '/cookie-policy">Cookie policy</a> | <a target="_blank" href="'. get_privacy_policy_url() . '">Privacy policy</a> | <a target="_blank" href="' . get_home_url() . '/ccpa">Your California privacy rights/privacy policy</a></p>
+  <!-- <p><a target="_blank" href="' . get_home_url().'/cookie-policy">Do Not Sell My Personal Information/Cookie Settings</a></p>-->
   <!-- OneTrust Cookies Settings button start -->
   <button id="ot-sdk-btn" class="ot-sdk-show-settings">Cookie Settings</button>
   <!-- OneTrust Cookies Settings button end -->
@@ -91,18 +90,6 @@ function form_module() {
   ';
 }
 
-add_shortcode('available-routes', 'available_routes');
-
-function available_routes() {
-  return '
-    <div id="available-routes">
-      <h3>Available Routes</h3>
-      <div id="returned-routes"></div>
-    </div>
-    <script type="text/javascript" src="' . plugin_dir_url( __FILE__ ) . 'js/routes.js"></script>
-
-  ';
-}
 
 function gps_app_style() {
         /** Enqueue Style Sheets */
