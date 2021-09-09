@@ -46,25 +46,37 @@ function gps_app_header() {
 add_shortcode('place-form', 'form_module');
 
 function form_module() {
-  $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
 
-  $custom_logo_id = get_theme_mod( 'custom_logo' );
-  $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
-  $logo = $image[0];
   return '
   <div id="form-module">
-    <h2>Apply Now</h2>
+    <h2><span>Apply Now</span></h2>
     <div id="zip-module">
       <p>Enter your zip code to begin your application.</p>
       <form id="zipform" onSubmit="return false">
         <input type="text" name="zip" id="enter-zip" placeholder="Zip code">
-        <input type="submit" id="start-app" value="Continue">
+        <input type="submit" id="start-app" value="Continue"><div id="arrow"></div>
       </form>
     </div>
     
 
     <div id="form-here"></div>
   </div>
+
+  
+  ';
+}
+
+
+add_shortcode('place-footer', 'footer_module');
+
+function footer_module() {
+  $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
+
+  $custom_logo_id = get_theme_mod( 'custom_logo' );
+  $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+  $logo = $image[0];
+
+  return'
 
   <footer id="gps-footer">
   <div class="footer-text">
@@ -85,11 +97,8 @@ function form_module() {
   </div>
     
    
-  </footer>
-  
-  ';
+  </footer>';
 }
-
 
 function gps_app_style() {
         /** Enqueue Style Sheets */

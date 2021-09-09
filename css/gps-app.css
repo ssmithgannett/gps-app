@@ -105,7 +105,7 @@
  .hero-text p {
     text-shadow: 5px 5px 5px rgba(0,0,0,0.7);
      color: #fff;
-     font-size: 1.2em;
+     font-size: 1.4em;
      font-weight: bold;
  }
 
@@ -196,7 +196,11 @@
  #form-module h2 {
      color:#009bff;
      text-align: center;
-     border: 0!important;
+ }
+
+ #form-module h2 span {
+    border-bottom: 3px solid #dd0000;
+
  }
 
  footer#gps-footer {
@@ -264,6 +268,15 @@ h3.bullet-title {
     justify-content: center;
     padding-top: 7px;
     padding-bottom: 7px;
-    margin-left: 5%;
+    margin: auto;
   }
 
+  #arrow {
+      border-top: 2px solid #fff;
+      border-right: 2px solid #fff;
+      transform: rotate(45deg);
+      width: 10px;
+      height: 10px;
+      margin-bottom: 3px;
+
+  }
